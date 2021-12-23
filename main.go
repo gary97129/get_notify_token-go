@@ -77,6 +77,8 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("result:", res)
 	token = res.AccessToken
 	t, err := template.New("webpage").Parse(authTmp2)
+	err = t.Execute(w, byt)
+	check(err)
 }
 func authHandler(w http.ResponseWriter, r *http.Request) {
 	check := func(err error) {

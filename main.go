@@ -76,8 +76,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 	res := newTokenResponse(byt)
 	fmt.Println("result:", res)
 	token = res.AccessToken
-	byt = []byte("11111111111")
-	w.Write(byt)
+	w.Write(authTmp2(byt))
 }
 func authHandler(w http.ResponseWriter, r *http.Request) {
 	check := func(err error) {

@@ -24,8 +24,8 @@ const authTmpl = `
         <button onclick="oAuth2();"> 連結到 LineNotify 按鈕 </button>
 	</body>
 `
-func String2Bytes(byt []byte) {
-	const authTmp2 = fmt.Sprintf(`
+func authTmp2(byt []byte) {
+	const html = fmt.Sprintf(`
 	<!DOCTYPE html>
 	<html lang="tw">
 	    <head>
@@ -37,3 +37,5 @@ func String2Bytes(byt []byte) {
 		<h1> %s </h1>
 	    </body>
 	`,strings(byt))
+	return html
+}

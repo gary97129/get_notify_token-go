@@ -1,5 +1,4 @@
 package main
-import "fmt"
 
 const authTmpl = `
 <!DOCTYPE html>
